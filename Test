@@ -1,4 +1,5 @@
 //1. Найдите значение функции: z = ( (a – 3 ) * b / 2) + c.
+_________________________________________________________________
 import java.util.Scanner;
 
 public class JavaEPAM {
@@ -10,7 +11,46 @@ public class JavaEPAM {
         int b = sc.nextInt();
         System.out.println("Укажите значение переменной c ");
         int c = sc.nextInt();
-        int z = ((a-3)*b/2)+c;
+        int z = ((a - 3) * b / 2) + c;
         System.out.println("Значение функции z = "+z);
     }
 }
+_________________________________________________________________
+//2. Вычислить значение выражения по формуле (все переменные принимают действительные значения):
+_________________________________________________________________
+import java.util.Scanner;
+import static java.lang.Math.*;
+import static java.lang.System.*;
+
+public class JavaEPAM {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(in);
+        out.println("Укажите значение переменной a ");
+        double a = sc.nextInt();
+        out.println("Укажите значение переменной b ");
+        double b = sc.nextInt();
+        out.println("Укажите значение переменной c ");
+        double c = sc.nextInt();
+        double z = (b + sqrt(pow(b,2) + 4 * a * c)) / (2 * a) - (pow(a,3) * c) + pow(b,-2);
+        out.println("Значение уравнения z = "+z);
+    }
+}
+_________________________________________________________________
+//3. Вычислить значение выражения по формуле (все переменные принимают действительные значения):
+_________________________________________________________________
+import java.util.Scanner;
+import static java.lang.Math.*;
+import static java.lang.System.*;
+
+public class JavaEPAM {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(in);
+        out.println("Укажите значение переменной x ");
+        double x = sc.nextInt();
+        out.println("Укажите значение переменной y ");
+        double y = sc.nextInt();
+        double z = (sin(x) + cos(y)) / (cos(x) - sin(y)) * tan(x * y);
+        out.println("Значение выражения z = "+z);
+    }
+}
+_________________________________________________________________
