@@ -119,3 +119,80 @@ public class JavaEPAM {
         }
     }
 }
+_________________________________________________________________
+/* 7. Даны два угла треугольника (в градусах). Определить, существует ли такой треугольник, и если да, то будет ли
+он прямоугольным*/
+_________________________________________________________________
+import java.util.Scanner;
+import static java.lang.System.*;
+
+public class JavaEPAM {
+
+    public static void main(String[] args){
+       Scanner sc = new Scanner(in);
+       out.println("Задайте угуол а ");
+       int a = sc.nextInt();
+       out.println("Задайте угол b ");
+       int b = sc.nextInt();
+       if(180>a+b){
+        out.print("Треугольник существует");
+        if(a+b==90){
+            out.println(" и он прямоугольный");
+        }else{out.println(", но он не прямоугольный");}
+       }else{
+           out.println("Такого треугольника не бывает");
+       }
+    }
+}
+_________________________________________________________________
+// 8. Найти max{min(a, b), min(c, d)}
+_________________________________________________________________
+import java.util.Scanner;
+import static java.lang.System.*;
+import static java.lang.Math.*;
+
+public class JavaEPAM {
+
+    public static void main(String[] args){
+       Scanner sc = new Scanner(in);
+       out.println("Задайте значение а ");
+       int a = sc.nextInt();
+       out.println("Задайте значение b ");
+       int b = sc.nextInt();
+       out.println("Задайте значение с ");
+       int c = sc.nextInt();
+       out.println("Задайте значение d ");
+       int d = sc.nextInt();
+       int result = max(min(a,b),min(c,d));
+        out.println("Результат сравнения "+result);
+    }
+}
+_________________________________________________________________
+// 9. Даны три точки А(х1,у1), В(х2,у2) и С(х3,у3). Определить, будут ли они расположены на одной прямой.
+_________________________________________________________________
+import java.util.Scanner;
+import static java.lang.System.*;
+
+public class project {
+
+    public static void main(String[] args){
+       Scanner sc = new Scanner(in);
+       out.println("Задайте значение точки A x1 ");
+       int x1 = sc.nextInt();
+       out.println("Задайте значение точки A y1 ");
+       int y1 = sc.nextInt();
+       out.println("Задайте значение точки B x2 ");
+       int x2 = sc.nextInt();
+       out.println("Задайте значение точки B y2 ");
+       int y2 = sc.nextInt();
+       out.println("Задайте значение точки C x3 ");
+       int x3 = sc.nextInt();
+       out.println("Задайте значение точки C y3 ");
+       int y3 = sc.nextInt();
+       if((x3-x1)*(y2-y1)==(y3-y1)*(x2-x1)){
+           out.println("Точки находятся на одной линии");
+       }else{
+           out.println("Точки не находятся на одной линии");
+       }
+    }
+}
