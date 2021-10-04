@@ -256,7 +256,7 @@ package com.company.Basics.Task_12;
 import java.util.Scanner;
 import static java.lang.System.*;
 
-public class Task12 {
+public class JavaEPAM {
     public static void main(String[] args){
         int x = 0;
         Scanner sc = new Scanner(in);
@@ -266,6 +266,97 @@ public class Task12 {
                 x +=i;
         }
        out.println("Сумма чисел = "+x);
+    }
+}
+_________________________________________________________________
+//13.Вычислить значения функции на отрезке [а,b] c шагом h
+_________________________________________________________________
+package com.company.Basics.Task_13;
+import java.util.Scanner;
+import static java.lang.System.*;
+
+public class JavaEPAM {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(in);
+        out.println("Введите значение а");
+        int a = sc.nextInt();
+        out.println("Введите значение b");
+        int b = sc.nextInt();
+        out.println("Введите значение h");
+        int h = sc.nextInt();
+        out.println("Введите значение x");
+        int x = sc.nextInt();
+        int y = 0;
+        for(int i = a; i<=b; i+=h){
+            if (x > 2) {
+                y = x;
+            } else {
+                y = -x;
+            }
+        }
+        out.println("Значение функции y = "+y);
+    }
+}
+_________________________________________________________________
+//14.Найти сумму квадратов первых ста чисел
+_________________________________________________________________
+package com.company.Basics.Task_14;
+import static java.lang.Math.*;
+import static java.lang.System.*;
+
+public class JavaEPAM {
+    public static void main(String[] args){
+        int x = 0;
+        for(int i = 1; i<=100; i++){
+            x = (int) (x+pow(i,2));
+        }
+        out.println("Сумма квадратов первых ста чисел = "+x);
+    }
+}
+_________________________________________________________________
+//15.Составить программу нахождения произведения квадратов первых двухсот чисел
+_________________________________________________________________
+package com.company.Basics.Task_15;
+import static java.lang.Math.*;
+import static java.lang.System.*;
+import java.math.*;
+
+public class JavaEPAM {
+    public static void main(String[] args){
+        int x = 0;
+        BigInteger s = BigInteger.valueOf(1);
+        for(int i = 1; i<=200; i++){
+            x = (int) pow(i,2);
+            s = s.multiply(BigInteger.valueOf(x));
+        }
+        out.println("Произведение квадратов первых двухсот чисел = "+s);
+    }
+}
+_________________________________________________________________
+/*16.Даны числовой ряд и некоторое число е. Найти сумму тех членов ряда, модуль которых больше или равен
+заданному е. Общий член ряда имеет вид*/
+_________________________________________________________________
+package com.company.Basics.Task_16;
+import java.util.Scanner;
+import static java.lang.System.*;
+import static java.lang.Math.*;
+
+public class JavaEPAM {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(in);
+        out.println("Введите значение числового ряда ");
+        double n = sc.nextDouble();
+        out.println("Введите значение е ");
+        double e = sc.nextDouble();
+        double a = 0;
+        double sum = 0;
+        for(int i=0; i<=n; i++){
+            a = 1/pow(2,i)+1/pow(3,i);
+            if(abs(a)>=e){
+               sum+=a;
+            }
+        }
+        out.println(sum);
     }
 }
 _________________________________________________________________
