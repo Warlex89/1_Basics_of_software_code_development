@@ -360,3 +360,71 @@ public class JavaEPAM {
     }
 }
 _________________________________________________________________
+//17.Вывести на экран соответствий между символами и их численными обозначениями в памяти компьютера
+_________________________________________________________________
+package com.company.Basics.Task_17;
+import static java.lang.System.*;
+
+public class JavaEPAM {
+    public static void main(String[] ars){
+        for(int i=32; i<127; i++){
+            out.println(i+" = "+(char)i);
+        }
+    }
+}
+_________________________________________________________________
+/*18.Для каждого натурального числа в промежутке от m до n вывести все делители, кроме единицы и самого числа.
+m и n вводятся с клавиатуры*/
+_________________________________________________________________
+package com.company.Basics.Task_18;
+import java.util.Scanner;
+import static java.lang.System.*;
+
+public class JavaEPAM {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(in);
+        out.println("Введите значение m");
+        int m = sc.nextInt();
+        out.println("Введите значение n");
+        int n = sc.nextInt();
+        while(m<n){
+            for(int i=2; i<=n-m+1; i++){   // n-m+1 - количество циклов; прибавляем 1, т.к. i = 2, а не 1
+                if(m%i==0 & m!=i){
+                    out.println("Делитель = "+i);
+                }
+            }
+            m+=1;
+            out.println("Новое значение m ="+m);
+        }
+    }
+}
+_________________________________________________________________
+//19.Даны два числа. Определить цифры, входящие в запись как первого так и второго числа.
+package com.company.Basics.Task_19;
+import java.util.ArrayList;
+import java.util.Scanner;
+import static java.lang.System.*;
+
+public class Task19 {
+    public static void main(String[] args){
+        Scanner sc = new Scanner(in);
+        out.println("Введите значение числа a ");
+        int a = sc.nextInt();
+        out.println("Введите значение числа b ");
+        int b = sc.nextInt();
+        out.println("Цифры числа а = "+numbers(a));
+        out.println("Цифры числа а = "+numbers(b));
+
+    }
+    public static ArrayList numbers(int a){
+        ArrayList<Integer> array = new ArrayList<Integer>();
+        do{
+            int i = 0;
+            array.add(i,a%10);
+            a = a/10;
+            i++;
+        }while (a>0);
+        return array;
+    }
+}
+_________________________________________________________________
